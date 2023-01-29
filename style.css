@@ -19,7 +19,23 @@ body{
     margin-top: 15px;
 }
 
-.link:hover {
+.link:hover
+{
     font-size: 25px;
-    text-decoration: underline;
 }
+
+.footer
+{
+    float: right;
+    font-size: 25px;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;    
+}
+
+canvas
+{
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 5px;
+}
+
