@@ -1,8 +1,9 @@
 Status = "";
 tv_image = "";
+objects = [];
 
 function preload(){
-    fan_image = loadImage("Fan.jpg");
+    tv_image = loadImage("TV.jpeg");
 }
 
 function setup(){
@@ -15,7 +16,7 @@ function setup(){
 function modelLoaded(){
     console.log("Model Loaded!");
     Status = true;
-    object_Detector.detect(fan_image,gotResults);
+    object_Detector.detect(tv_image,gotResults);
 }
 
 function gotResults(error,results){
@@ -26,5 +27,17 @@ function gotResults(error,results){
 }
 
 function draw(){
-    image(fan_image,0,0,640,350);
+    image(tv_image,0,0,640,350);
+    if(Status != ""){
+        for(i = 0; i < objects.length; i++){
+            document.getElementById("status").innerHTML = "Status: Objects Detected";
+
+            fill("#FF0000");
+            percent = floor(objects[i].confidence * 100);
+            text(objects[i].label + " " + percent + "%",objects[i].x - 14, objects[i].y - 175);
+            noFill();
+            stroke("#FF0000");
+            rect(objects[i].x - 14, objects[i].y - 175, objects[i].width - 2326, objects[i].height - 2850);
+        }
+    }
 }
