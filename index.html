@@ -1,7 +1,7 @@
 <html>
 <head>
 
-	<title>Object Detection</title>
+	<title>AI Video Surveillance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,17 +13,20 @@
   
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body background="Background.jpg">
     <center>
-        <h1 class="btn btn-success header">Object Detection</h1>
-                <br><br><br><br><br><br>
-            <li class="link"><a href="fan.html">Fan</a></li>
-            <li class="link"><a href="tv.html">TV</a></li>
-            <li class="link"><a href="Ac.html">AC</a></li>
-            <li class="link"><a href="bottle.html">Bottle</a></li>
-            <li class="link"><a href="light_bulb.html">Light Bulb</a></li>
-               
+        <h1 class="btn btn-info heading">Object Finder Web App 
+        <br>
+        <span class="note">The Input name which you will give should match the names present in CoCo model then only it will detect </span>
+        <br><br>
+        <h1> Object Name :</h1>
+        <br>
+        <input type="text"> 
+        <br><br>
+        <span id="status">
+          <h3 class = "btn btn-danger" id="Modal_Status"></h3>
+          <h3 class="btn btn-warning" id="status_found"></h3>
+        </span>   
     </center>
 </body>
 </html>
